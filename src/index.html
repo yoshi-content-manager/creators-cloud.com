@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Creators Cloud – Content sync & backup</title>
+    <meta
+      name="description"
+      content="Creators Cloud keeps your content synchronized and safely backed up."
+    />
+    <link rel="icon" href="assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/site.webmanifest" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+    <script defer src="assets/app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <img
+              src="assets/images/logo.jpg"
+              height="40"
+              alt="Creators Cloud"
+            />
+          </span>
+        </div>
+        <nav class="nav">
+          <a href="#features">Features</a>
+          <a href="#early-access" class="cta-link">Early Access</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1>Sync & back up your content – without the chaos</h1>
+            <p class="sub">
+              Creators Cloud keeps your libraries in sync and safely backed up.
+              Private beta only. Leave your handle and a contact to join the
+              list.
+            </p>
+            <ul class="bullets">
+              <li>✅ Content synchronization across platforms</li>
+              <li>✅ Reliable backups, creator-first privacy</li>
+              <li>
+                ✅ Security is taken seriously: TLS, OAuth2, and modern
+                standards
+              </li>
+            </ul>
+          </div>
+
+          <!-- Form -->
+          <div class="card form-card" id="early-access">
+            <h2>Request Early Access</h2>
+            <form id="waitlist-form" novalidate>
+              <div class="field">
+                <label for="creator_handle">Creator handle</label>
+                <input
+                  id="creator_handle"
+                  name="creator_handle"
+                  type="text"
+                  placeholder="yourhandle"
+                  required
+                />
+                <small class="hint"
+                  >Your public creator handle (OnlyFans, Fansly, Twitter,
+                  etc.).</small
+                >
+              </div>
+
+              <div class="field">
+                <label for="contact_value">Your contact</label>
+                <input
+                  id="contact_value"
+                  name="contact_value"
+                  type="text"
+                  placeholder="telegram username or email"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="notes"
+                  >Anything we should know?
+                  <span class="optional">(optional)</span></label
+                >
+                <textarea
+                  id="notes"
+                  name="notes"
+                  rows="3"
+                  placeholder="Platforms you use, storage needs, or a short note."
+                ></textarea>
+              </div>
+
+              <input type="hidden" id="utm_source" name="utm_source" />
+              <input type="hidden" id="utm_medium" name="utm_medium" />
+              <input type="hidden" id="utm_campaign" name="utm_campaign" />
+              <input type="hidden" id="referrer" name="referrer" />
+
+              <button class="btn btn-primary" id="submit-btn" type="submit">
+                <span class="btn-label">Join the waitlist</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+              </button>
+
+              <p class="form-footnote">
+                By submitting, you agree we may contact you about the beta.
+                We’ll never share your info.
+              </p>
+
+              <div id="form-status" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="features">
+        <div class="container">
+          <div class="grid">
+            <article class="card feature">
+              <h3>Unified Library</h3>
+              <p>
+                Bring scattered photos & videos into a single source of
+                truth—organized, searchable, and ready to publish.
+              </p>
+            </article>
+            <article class="card feature">
+              <h3>Sync Across Platforms</h3>
+              <p>
+                Keep your vaults consistent and avoid duplicate uploads or lost
+                posts.
+              </p>
+            </article>
+            <article class="card feature">
+              <h3>Security by Design</h3>
+              <p>
+                We follow industry standards like TLS and OAuth2 to keep your
+                data safe.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container foot-inner">
+        <p>© <span id="year"></span> Creators Cloud. All rights reserved.</p>
+        <p class="muted">
+          Private beta. No self-serve signup (yet). Shoot us an email at
+          <a class="muted" href="mailto:hello@creatorscloud.com"
+            >hello@creatorscloud.com</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
