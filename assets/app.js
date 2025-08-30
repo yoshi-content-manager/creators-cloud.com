@@ -94,9 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const { data, error } = await supabaseClient
         .from("waitlist_leads")
-        .insert(payload)
-        .select("id, created_at")
-        .single();
+        .insert(payload);
 
       if (error) throw error;
 
