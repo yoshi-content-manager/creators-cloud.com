@@ -4,8 +4,8 @@
    Table: public.waitlist_leads
    ================================ */
 
-const SUPABASE_URL = "https://YOUR_PROJECT_ID.supabase.co";
-const SUPABASE_ANON_KEY = "YOUR_PUBLISHABLE_ANON_KEY";
+const SUPABASE_URL = "https://api-dev.creators-cloud.com";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlzcyI6InN1cGFiYXNlIiwiaWF0IjoxNzU1MTIyNDAwLCJleHAiOjE5MTI4ODg4MDB9.6KDkb4AjPbqZclRiTTxahyQhtlNk3mfcTrOwOs_9fJE";
 
 let supabaseClient;
 
